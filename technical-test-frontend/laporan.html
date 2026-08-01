@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Test Submission - M. Iftikharul</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; color: #1e293b; padding: 25px; line-height: 1.6; font-size: 11pt; }
+        .header { background: #0f172a; color: white; padding: 20px; border-radius: 6px; margin-bottom: 20px; }
+        .header h1 { margin: 0 0 5px 0; font-size: 18pt; }
+        .header p { margin: 0; color: #94a3b8; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        td, th { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 10pt; }
+        .label { font-weight: bold; background: #f8fafc; width: 28%; }
+        .card { border: 1px solid #cbd5e1; padding: 14px; border-radius: 6px; margin-bottom: 12px; background: #fff; }
+        .link { background: #eff6ff; border: 1px dashed #3b82f6; padding: 8px 10px; font-family: monospace; color: #1d4ed8; word-break: break-all; margin-top: 6px; border-radius: 4px; }
+        .section { font-size: 12pt; font-weight: bold; color: #0f172a; border-left: 4px solid #2563eb; padding-left: 10px; margin: 22px 0 10px 0; }
+        .badge { display: inline-block; padding: 2px 6px; font-weight: bold; border-radius: 4px; font-size: 8pt; text-transform: uppercase; }
+        .badge-pemohon { background: #dbeafe; color: #1e40af; }
+        .badge-penilai { background: #dcfce7; color: #166534; }
+        ul { margin: 5px 0; padding-left: 20px; }
+        li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Laporan Hasil Technical Test</h1>
+        <p>Sistem Informasi Persetujuan Dokumen Kelayakan (BPLH)</p>
+    </div>
+
+    <table>
+        <tr><td class="label">Nama Kandidat</td><td><strong>M. Iftikharul</strong></td></tr>
+        <tr><td class="label">Posisi Melamar</td><td>Full Stack Programmer</td></tr>
+        <tr><td class="label">Stack Teknologi</td><td>Backend: Laravel 11 (API) | Frontend: Vue 3 + Vite | Database: PostgreSQL</td></tr>
+        <tr><td class="label">Tanggal Penyerahan</td><td>1 Agustus 2026</td></tr>
+    </table>
+
+    <div class="section">1. Link Repository Git & Video Demo</div>
+    <div class="card">
+        <strong>📌 URL Repository GitHub (Fullstack):</strong>
+        <div class="link">https://github.com/miftikharul/technical-test-fullstack-BPLH.git</div>
+    </div>
+    <div class="card">
+        <strong>🎥 Link Video Demo Project:</strong>
+        <div class="link">https://drive.google.com/file/d/YOUR_VIDEO_DEMO_LINK_HERE/view?usp=sharing</div>
+    </div>
+
+    <div class="section">2. Akun Demo & Kredensial Pengujian</div>
+    <table>
+        <tr style="background:#f1f5f9;"><th>Role User</th><th>Email Akun</th><th>Password</th><th>Hak Akses Utama</th></tr>
+        <tr>
+            <td><span class="badge badge-pemohon">Pemohon</span></td>
+            <td><strong>pemohon@test.com</strong></td>
+            <td><code>password123</code></td>
+            <td>Login, buat permohonan baru, upload file (PDF/Docx), lihat status & riwayat revisi.</td>
+        </tr>
+        <tr>
+            <td><span class="badge badge-penilai">Penilai</span></td>
+            <td><strong>penilai@test.com</strong></td>
+            <td><code>password123</code></td>
+            <td>Login, lihat seluruh permohonan, beri catatan review (Approve, Revisi, Reject).</td>
+        </tr>
+    </table>
+
+    <div class="section">3. Ringkasan Fitur & Arsitektur Sistem</div>
+    <div class="card">
+        <ul>
+            <li><strong>Autentikasi & Otorisasi:</strong> SPA Token Auth (Laravel Sanctum) & Spatie Role/Permission.</li>
+            <li><strong>Data Masif (Seeder):</strong> 1.000 User Pemohon, 1.000 User Penilai, dan 10.000 Data Project Permohonan.</li>
+            <li><strong>Workflow & Audit Logs:</strong> Riwayat kronologis (history logs) penilaian dan revisi.</li>
+            <li><strong>Validasi Dokumen:</strong> Format file terverifikasi (PDF/DOCX/JPG/PNG) & max ukuran 5MB.</li>
+        </ul>
+    </div>
+</body>
+</html>

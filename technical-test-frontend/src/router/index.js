@@ -3,24 +3,30 @@ import Login from '../views/Login.vue';
 import Dashboard from '../views/Dashboard.vue';
 
 const routes = [
-  { path: '/', redirect: '/login' },
-  { path: '/login', component: Login },
-  { path: '/pemohon/dashboard', component: Dashboard, meta: { requiresAuth: true } },
-  { path: '/penilai/dashboard', component: Dashboard, meta: { requiresAuth: true } },
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/pemohon/dashboard',
+    name: 'PemohonDashboard',
+    component: Dashboard
+  },
+  {
+    path: '/penilai/dashboard',
+    name: 'PenilaiDashboard',
+    component: Dashboard
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-});
-
-router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token');
-  if (to.meta.requiresAuth && !token) {
-    next('/login');
-  } else {
-    next();
-  }
+  routes
 });
 
 export default router;
